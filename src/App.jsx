@@ -136,7 +136,10 @@ function App() {
         <div className="header-top">
           <div className="header-left">
             <img src="/assets/logo/chiquisLogo_simple.png" alt="Chiqui's Logo" className="header-logo" />
-            <h1><span className="header-chiquis">Chiqui's</span> <span className="header-nutrition">Nutrition</span></h1>
+            <div className="header-text">
+              <h1><span className="header-chiquis">Chiqui's</span> <span className="header-nutrition">Nutrition</span></h1>
+              <p className="header-slogan">Your Daily Boost Starts Here</p>
+            </div>
           </div>
           <nav className={`nav-menu ${menuOpen ? 'open' : ''}`}>
             <a href="#food" onClick={() => setMenuOpen(false)}>Food</a>
@@ -158,17 +161,15 @@ function App() {
 
       <section className="logo-section">
         <img src="/assets/logo/Chiquis_Full_Color_Logo.png" alt="Chiquis Full Color Logo" className="main-logo" />
+        <div className="second-slogan">Quality nutrition products for a healthier you</div>
         <div className="contact-info">
-          <p className="address">8028 SE Powell Blvd. Suite 106, Portland, OR 97206</p>
+          <p className="address">8028 SE Powell Blvd. Ste. #106</p>
+          <p className="address">Portland, OR 97206</p>
           <p className="phone">(503) 935-6027</p>
         </div>
       </section>
 
       <main className="main-content">
-        <section className="hero">
-          <h2 className="pacifico-title">Your Daily Boost Starts Here</h2>
-          <p>Quality nutrition products for a healthier you</p>
-        </section>
 
         <section className="products">
           <h2 className="pacifico-title">Our Products</h2>
@@ -198,19 +199,15 @@ function App() {
               <div className="schedule-grid">
                 <div className="schedule-item">
                   <span className="day">Monday</span>
-                  <span className="time">6:00 PM - 7:00 PM</span>
+                  <span className="time">7:00 PM</span>
                 </div>
                 <div className="schedule-item">
                   <span className="day">Wednesday</span>
-                  <span className="time">6:00 PM - 7:00 PM</span>
-                </div>
-                <div className="schedule-item">
-                  <span className="day">Friday</span>
-                  <span className="time">5:30 PM - 6:30 PM</span>
+                  <span className="time">7:00 PM</span>
                 </div>
                 <div className="schedule-item">
                   <span className="day">Saturday</span>
-                  <span className="time">9:00 AM - 10:00 AM</span>
+                  <span className="time">1:00 PM</span>
                 </div>
               </div>
               <button className="join-btn">Join a Class</button>
@@ -220,7 +217,7 @@ function App() {
       </main>
 
       <footer className="footer">
-        <p>&copy; 2024 Chiqui's Nutrition. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Chiqui's Nutrition. All rights reserved.</p>
       </footer>
     </div>
   )
