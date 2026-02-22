@@ -162,7 +162,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 8rem 2rem;
+  padding: 6rem 2rem;
   gap: 1.5rem;
   background: linear-gradient(135deg, #EFC0D8 0%, #FFFACD 100%);
   border-bottom: none;
@@ -177,8 +177,8 @@ body {
 }
 
 .second-slogan {
-  font-family: 'AppetitePro';
   font-size: 2rem;
+  font-style: italic;
   font-weight: 400;
   text-align: center;
   color: black;
@@ -195,9 +195,8 @@ body {
 
 .contact-info p {
   font-size: 1.1rem;
-  color: #555;
-  font-weight: 500;
-  line-height: 14px;
+  color: black;
+  font-weight: 400;
   margin: 0;
 }
 
