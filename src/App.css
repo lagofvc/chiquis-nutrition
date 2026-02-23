@@ -64,6 +64,7 @@ body {
   display: flex;
   flex-direction: column;
   white-space: nowrap;
+  text-align: left;
 }
 
 .header-logo {
@@ -86,6 +87,8 @@ body {
   font-family: 'Montserrat';
   font-weight: 400;
   margin: 0;
+  text-align: left;
+  padding-left: 4px;
 }
 
 .header-chiquis {
@@ -510,6 +513,10 @@ body {
     height: 300px;
   }
 
+  .second-slogan {
+    font-size: 1.5rem;
+  }
+
   .contact-info p {
     font-size: 0.95rem;
   }
@@ -530,4 +537,21 @@ body {
   .zumba-image-placeholder {
     height: 250px;
   }
+}
+
+@media (max-width: 480px) {
+
+  .header-slogan {
+    font-size: 0.9rem;
+    padding: 0px;
+  }
+
+  .main-logo {
+    height: 225px;
+  }
+
+  .second-slogan {
+    font-size: 1.25rem;
+  }
+
 }
