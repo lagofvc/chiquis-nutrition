@@ -169,6 +169,10 @@ body {
   align-items: center;
   padding: 6rem 2rem;
   gap: 1.5rem;
+  
+  a {
+    color: black;
+  }
 }
 
 .main-logo {
@@ -417,7 +421,7 @@ body {
 .join-btn {
   width: 100%;
   background: white;
-  color: #f5576c;
+  color: black;
   border: none;
   padding: 1rem 2rem;
   border-radius: 25px;
@@ -491,7 +495,7 @@ body {
 
 .phone-link, .email-link {
   color: white;
-  text-decoration: none;
+  text-decoration: underline;
   transition: opacity 0.2s ease;
 }
 
@@ -540,6 +544,16 @@ body {
 .footer-bottom p {
   font-size: 0.9rem;
   margin: 0;
+}
+
+.credit-link {
+  color: white;
+  text-decoration: underline;
+  transition: opacity 0.2s ease;
+}
+
+.credit-link:hover {
+  opacity: 0.8;
 }
 
 /* Responsive Design */

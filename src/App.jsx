@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import packageJson from '../package.json'
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -142,10 +143,10 @@ function App() {
             </div>
           </div>
           <nav className={`nav-menu ${menuOpen ? 'open' : ''}`}>
-            <a href="#food" onClick={() => setMenuOpen(false)}>Food</a>
-            <a href="#beverages" onClick={() => setMenuOpen(false)}>Beverages</a>
-            <a href="#classes" onClick={() => setMenuOpen(false)}>Classes</a>
-            <a href="#contact" onClick={() => setMenuOpen(false)}>Contact Us</a>
+            <a href="#products" onClick={(e) => { e.preventDefault(); setMenuOpen(false); document.getElementById('products')?.scrollIntoView({behavior: 'smooth'}); }}>Food</a>
+            <a href="#products" onClick={(e) => { e.preventDefault(); setMenuOpen(false); document.getElementById('products')?.scrollIntoView({behavior: 'smooth'}); }}>Beverages</a>
+            <a href="#classes" onClick={(e) => { e.preventDefault(); setMenuOpen(false); document.getElementById('zumba-section')?.scrollIntoView({behavior: 'smooth'}); }}>Classes</a>
+            <a href="#contact" onClick={(e) => { e.preventDefault(); setMenuOpen(false); document.getElementById('footer')?.scrollIntoView({behavior: 'smooth'}); }}>Contact Us</a>
           </nav>
           <button
             className={`burger-menu ${menuOpen ? 'open' : ''}`}
@@ -165,13 +166,13 @@ function App() {
         <div className="contact-info">
           <p className="address">8028 SE Powell Blvd. Ste. #106</p>
           <p className="address">Portland, OR 97206</p>
-          <p className="phone">(503) 935-6027</p>
+          <p className="phone"><a href="tel:(503)935-6027">(503) 935-6027</a></p>
         </div>
       </section>
 
       <main className="main-content">
 
-        <section className="products">
+        <section className="products" id="products">
           <h2 className="pacifico-title">Our Products</h2>
           <div className="product-grid">
             {products.map((product) => (
@@ -188,7 +189,7 @@ function App() {
           </div>
         </section>
 
-        <section className="zumba-section">
+        <section className="zumba-section" id="zumba-section">
           <h2 className="pacifico-title">Zumba Classes</h2>
           <div className="zumba-content">
             <div className="zumba-image-placeholder">
@@ -216,18 +217,14 @@ function App() {
         </section>
       </main>
 
-      <footer className="footer">
+      <footer className="footer" id="footer">
         <div className="footer-content">
           <div className="footer-section hours-section">
             <h3>Hours</h3>
             <div className="hours-list">
-              <p><strong>Monday - Friday</strong>: 6AM - 1PM & 6PM - 9PM</p>
-              {/* <p>Tue: 6AM - 1PM / 6PM - 9PM</p>
-              <p>Wed: 6AM - 1PM / 6PM - 9PM</p>
-              <p>Thurs: 6AM - 1PM / 6PM - 9PM</p>
-              <p>Fri: 6AM - 1PM / 6PM - 9PM</p> */}
-              <p><strong>Saturday</strong>: 7AM - 1PM</p>
-              <p><strong>Sunday</strong>: Closed</p>
+              <p><strong>Mon - Fri</strong>: 6AM - 1PM & 6PM - 9PM</p>
+              <p><strong>Sat</strong>: 7AM - 1PM</p>
+              <p><strong>Sun</strong>: Closed</p>
             </div>
           </div>
 
@@ -255,8 +252,15 @@ function App() {
               <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" title="TikTok" className="social-link">
                 <i className="fab fa-tiktok"></i>
               </a>
+              <a href="https://maps.google.com/?q=8028+SE+Powell+Blvd+Ste+106+Portland+OR+97206" target="_blank" rel="noopener noreferrer" title="Google Maps" className="social-link">
+                <i className="fas fa-location-dot"></i>
+              </a>
           </div>
-          <p>&copy; {new Date().getFullYear()} Chiqui's Nutrition. All rights reserved.</p>
+          <div style={{lineHeight: 1.5, letterSpacing: 0.7}}>
+            <p>&copy; {new Date().getFullYear()} Chiqui's Nutrition.&nbsp;&nbsp;&nbsp;All rights reserved.</p>
+            <p>Made with <span style={{color: '#ff69b4'}}>❤</span> by <a href="https://fabiovalentino.com" target="_blank" rel="noopener noreferrer" className="credit-link"><strong>Valentronix</strong></a></p>
+            <p><span style={{fontFamily: 'monospace'}}>v{packageJson.version}</span></p>
+          </div>
         </div>
       </footer>
     </div>
