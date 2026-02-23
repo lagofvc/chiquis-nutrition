@@ -217,7 +217,47 @@ function App() {
       </main>
 
       <footer className="footer">
-        <p>&copy; {new Date().getFullYear()} Chiqui's Nutrition. All rights reserved.</p>
+        <div className="footer-content">
+          <div className="footer-section hours-section">
+            <h3>Hours</h3>
+            <div className="hours-list">
+              <p><strong>Monday - Friday</strong>: 6AM - 1PM & 6PM - 9PM</p>
+              {/* <p>Tue: 6AM - 1PM / 6PM - 9PM</p>
+              <p>Wed: 6AM - 1PM / 6PM - 9PM</p>
+              <p>Thurs: 6AM - 1PM / 6PM - 9PM</p>
+              <p>Fri: 6AM - 1PM / 6PM - 9PM</p> */}
+              <p><strong>Saturday</strong>: 7AM - 1PM</p>
+              <p><strong>Sunday</strong>: Closed</p>
+            </div>
+          </div>
+
+          <div className="footer-section location-section">
+            <h3>Location</h3>
+            <p>8028 SE Powell Blvd. Ste. #106</p>
+            <p>Portland, OR 97206</p>
+          </div>
+
+          <div className="footer-section contact-section">
+            <h3>Contact</h3>
+            <p><a href="tel:(503)935-6027" className="phone-link">(503) 935-6027</a></p>
+            <p><a href="mailto:chiquisnutritionpdx@gmail.com" className="email-link">chiquisnutritionpdx@gmail.com</a></p>
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          <div className="social-icons">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram" className="social-link">
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook" className="social-link">
+                <i className="fab fa-facebook"></i>
+              </a>
+              <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" title="TikTok" className="social-link">
+                <i className="fab fa-tiktok"></i>
+              </a>
+          </div>
+          <p>&copy; {new Date().getFullYear()} Chiqui's Nutrition. All rights reserved.</p>
+        </div>
       </footer>
     </div>
   )
