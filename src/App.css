@@ -709,7 +709,7 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 1110px) {
+@media (max-width: 1300px) {
   .burger-menu {
     display: flex;
   }

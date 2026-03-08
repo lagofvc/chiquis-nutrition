@@ -208,7 +208,7 @@ const App = () => {
               <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" title="TikTok" className="social-link">
                 <i className="fab fa-tiktok"></i>
               </a>
-              <a href="https://maps.google.com/?q=8028+SE+Powell+Blvd+Ste+106+Portland+OR+97206" target="_blank" rel="noopener noreferrer" title="Google Maps" className="social-link">
+              <a href="https://maps.app.goo.gl/aUxVC8CcPUcWfeHu6" target="_blank" rel="noopener noreferrer" title="Google Maps" className="social-link">
                 <i className="fas fa-location-dot"></i>
               </a>
           </div>
