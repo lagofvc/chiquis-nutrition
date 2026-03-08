@@ -193,6 +193,68 @@ body {
   color: #b06090;
 }
 
+/* Language Toggle */
+.lang-toggle-bar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.75rem 1.75rem 0;
+}
+
+.lang-toggle {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  opacity: 0.42;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.flag-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.flag-circle svg {
+  height: 100%;
+  width: auto;
+  display: block;
+  flex-shrink: 0;
+}
+
+.lang-label {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.lang-btn.active {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.lang-btn:hover:not(.active) {
+  opacity: 0.72;
+  transform: scale(1.04);
+}
+
 /* Logo Section */
 .logo-section {
   display: flex;
@@ -302,8 +364,7 @@ body {
 .featured-caption {
   text-align: center;
   font-size: 1.05rem;
-  color: #666;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.02em;
   margin: 1rem auto 0;
   max-width: 680px;
