@@ -41,7 +41,7 @@ const App = () => {
             <img src="/assets/logo/chiquisLogo_simple.png" alt="Chiqui's Logo" className="header-logo" />
             <div className="header-text">
               <h1><span className="header-chiquis">Chiqui's</span> <span className="header-nutrition">Nutrition</span></h1>
-              <p className="header-slogan" style={lang === 'es' ? { marginLeft: '-12px' } : undefined}>{t.slogan}</p>
+              <p className={`header-slogan${lang === 'es' ? ' header-slogan--es' : ''}`}>{t.slogan}</p>
             </div>
           </div>
           <nav className={`nav-menu ${menuOpen ? 'open' : ''}`}>

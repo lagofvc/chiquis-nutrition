@@ -821,6 +821,10 @@ body {
 
 @media (max-width: 480px) {
 
+  .header-slogan--es {
+    margin-left: -12px;
+  }
+
   .header-slogan {
     font-size: 0.9rem;
     padding: 0px;
