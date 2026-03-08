@@ -820,3 +820,11 @@ body {
     margin-top: 0.5rem;
   }
 }
+
+@media (max-width: 480px) and (orientation: portrait) {
+  .food-mosaic,
+  .beverages-mosaic,
+  .supplements-mosaic {
+    columns: 1;
+  }
+}
