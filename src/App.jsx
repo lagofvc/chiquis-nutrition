@@ -9,127 +9,36 @@ function App() {
     setMenuOpen(!menuOpen)
   }
 
-  const products = [
-    {
-      id: 1,
-      name: 'Healthy Foods',
-      category: 'Food',
-      description: 'Fresh, organic meal options prepared daily with wholesome ingredients. Perfect for those looking to maintain a balanced diet with delicious, nutrient-rich meals.',
-      image: '/assets/photos/IMG_0412.JPG'
-    },
-    {
-      id: 3,
-      name: 'Supplements',
-      category: 'Supplements',
-      description: 'High-quality nutritional supplements to support your wellness goals. From amino acids to specialized formulas, we have everything you need to optimize your health.',
-      image: '/assets/photos/IMG_0510.JPG'
-    },
-    {
-      id: 4,
-      name: 'Protein Shakes',
-      category: 'Beverages',
-      description: 'Delicious protein-packed shakes in a variety of flavors. Perfect post-workout fuel or meal replacement with premium protein and essential nutrients.',
-      image: '/assets/photos/IMG_1663.JPEG'
-    },
-    {
-      id: 5,
-      name: 'Organic Snacks',
-      category: 'Food',
-      description: 'Guilt-free snacking with our selection of organic treats and healthy alternatives. Perfect for on-the-go nutrition without compromising your health goals.',
-      image: '/assets/photos/att.Mj2mceoNVfxTgrCPRJWarzKJ9HqUW6KoQfsM9qnFkPU.JPG'
-    },
-    {
-      id: 6,
-      name: 'Vitamins',
-      category: 'Supplements',
-      description: 'Premium vitamin supplements to fill nutritional gaps and boost your immune system. Carefully selected brands to ensure maximum potency and absorption.',
-      image: '/assets/photos/IMG_0461.JPG'
-    },
-    {
-      id: 7,
-      name: 'Energy Boosters',
-      category: 'Supplements',
-      description: 'Powerful energy supplements to keep you active throughout the day. Natural ingredients to enhance stamina and mental focus.',
-      image: '/assets/photos/IMG_1662.JPEG'
-    },
-    {
-      id: 8,
-      name: 'Wellness Combos',
-      category: 'Food',
-      description: 'Complete wellness meal packages designed to meet all your nutritional needs in one convenient bundle.',
-      image: '/assets/photos/IMG_0072.JPG'
-    },
-    {
-      id: 9,
-      name: 'Detox Juices',
-      category: 'Beverages',
-      description: 'Cleanse and rejuvenate with our specially formulated detox juices made from premium organic ingredients.',
-      image: '/assets/photos/dfdcb46100afc3a736a7df7924e6aca6.JPEG'
-    },
-    {
-      id: 10,
-      name: 'Pre-Workout Drinks',
-      category: 'Beverages',
-      description: 'Fuel your workouts with high-energy drinks designed to maximize performance and endurance.',
-      image: '/assets/photos/FullSizeRender 2.JPG'
-    },
-    {
-      id: 11,
-      name: 'Special Blends',
-      category: 'Supplements',
-      description: 'Exclusive supplement blends crafted with care to target specific health and fitness goals.',
-      image: '/assets/photos/Screenshot 2026-02-21 at 6.33.31 PM.png'
-    },
-    {
-      id: 12,
-      name: 'Meal Prep Kits',
-      category: 'Food',
-      description: 'Pre-portioned meal kits ready to prepare, combining convenience with nutritional excellence.',
-      image: '/assets/photos/IMG_0686.JPG'
-    },
-    {
-      id: 13,
-      name: 'Basic Combos',
-      category: 'Food',
-      description: 'Affordable and delicious basic combination meals perfect for everyday nutrition.',
-      image: '/assets/photos/Basic Combos_20260202_213339_0000.PNG'
-    },
-    {
-      id: 14,
-      name: 'Premium Selection',
-      category: 'Supplements',
-      description: 'Our top-tier selection of the finest nutritional supplements available on the market.',
-      image: '/assets/photos/FullSizeRender.JPG'
-    },
-    {
-      id: 15,
-      name: 'Smoothie Packs',
-      category: 'Beverages',
-      description: 'Convenient smoothie ingredients bundled together for quick, nutritious drinks at home.',
-      image: '/assets/photos/IMG_0655.JPG'
-    },
-    {
-      id: 16,
-      name: 'Recovery Supplements',
-      category: 'Supplements',
-      description: 'Post-workout recovery products to help your muscles rebuild and restore energy levels.',
-      image: '/assets/photos/att.edLV7QTErcZlRsss7cdkpqNe7xwuLzZyAeBmB7vC-mk.JPEG'
-    },
-    {
-      id: 17,
-      name: 'Fitness Bundles',
-      category: 'Food',
-      description: 'Complete nutrition bundles designed specifically for fitness enthusiasts and athletes.',
-      image: '/assets/photos/Screenshot_20260204_221254_Canva.jpg'
-    },
-    {
-      id: 18,
-      name: 'Weight Management',
-      category: 'Beverages',
-      description: 'Specially formulated beverages to support healthy weight management and nutritional balance.',
-      image: '/assets/photos/IMG_0597.JPG'
-    },
+  const foodText = 'Our fresh variety of menu perfect for those looking to maintain a balance diet with delicious, nutrient-protein shakes and smoothies, Cleanse, Energy and rejuvenate Teas';
+
+  const supplementText = 'Boots your immune health with our Vitamins and Herbalife Supplements';
+  const supplementText1 = 'High-quality nutritional supplements to support your wellness goals. We have everything you need to optimize your health.';
+  const supplementText2 = 'Fuel your workouts with high- energy drinks designed to maximize performance and endurance.';
+
+  const zumbaClassText1 = 'I worked at a manufacturing company until one day I had a terrible accident that fractured a disc in my back. I went through four surgeries and couldn\'t walk for six years. During that time, I had to use a cane and my weight went up to 185 pounds. After my last surgery, I met a woman who invited me to try a Zumba class. I thought, "Why not try?" From that moment on, everything started to change. Little by little, I began dancing again. Niki supported and encouraged me every step of the way on my journey to becoming an instructor.';
+  const zumbaClassText2 = 'Today, I have been a Zumba instructor for 14 years. Like everyone, I have faced obstacles and difficult moments, but with God\'s help and the right motivation, I was able to overcome them. Life brings challenges for all of us, but Zumba helped free me from stress while getting in shape and enjoying the joy of dancing. If I can do it, you can too. Never give up on yourself.';
+  const zumbaClassText3 = '💃 First Class Always Free!';
+
+
+  const foodPhotos = [
+    '/assets/photos/food/menu-protein-bowls.png',
+    '/assets/photos/food/waffle.jpg',
+    '/assets/photos/food/pie1.jpg',
+    '/assets/photos/food/protein-cheescake.jpg',
+    '/assets/photos/food/IMG_0655.JPG',
+    '/assets/photos/food/panes.jpg',
+    '/assets/photos/food/pie2.jpg',
+    '/assets/photos/food/IMG_0686.JPG',
   ]
+
+  const beveragePhotos = [
+    '/assets/photos/beverages/menu-screen.jpg',
+    '/assets/photos/beverages/coldcoffees.jpg',
+    '/assets/photos/beverages/menu-drinks.png',
+    '/assets/photos/beverages/spicy-pepino-drink.jpg',
+    '/assets/photos/beverages/IMG_0597.JPG',
+  ]
+
 
   return (
     <div className="app">
@@ -143,8 +52,9 @@ function App() {
             </div>
           </div>
           <nav className={`nav-menu ${menuOpen ? 'open' : ''}`}>
-            <a href="#products" onClick={(e) => { e.preventDefault(); setMenuOpen(false); document.getElementById('products')?.scrollIntoView({behavior: 'smooth'}); }}>Food</a>
-            <a href="#products" onClick={(e) => { e.preventDefault(); setMenuOpen(false); document.getElementById('products')?.scrollIntoView({behavior: 'smooth'}); }}>Beverages</a>
+            <a href="#food" onClick={(e) => { e.preventDefault(); setMenuOpen(false); document.getElementById('food-section')?.scrollIntoView({behavior: 'smooth'}); }}>Food</a>
+            <a href="#beverages" onClick={(e) => { e.preventDefault(); setMenuOpen(false); document.getElementById('beverages-section')?.scrollIntoView({behavior: 'smooth'}); }}>Beverages</a>
+            <a href="#supplements" onClick={(e) => { e.preventDefault(); setMenuOpen(false); document.getElementById('supplements-section')?.scrollIntoView({behavior: 'smooth'}); }}>Supplements</a>
             <a href="#classes" onClick={(e) => { e.preventDefault(); setMenuOpen(false); document.getElementById('zumba-section')?.scrollIntoView({behavior: 'smooth'}); }}>Classes</a>
             <a href="#contact" onClick={(e) => { e.preventDefault(); setMenuOpen(false); document.getElementById('footer')?.scrollIntoView({behavior: 'smooth'}); }}>Contact Us</a>
           </nav>
@@ -162,7 +72,7 @@ function App() {
 
       <section className="logo-section">
         <img src="/assets/logo/Chiquis_Full_Color_Logo.png" alt="Chiquis Full Color Logo" className="main-logo" />
-        <div className="second-slogan">Quality nutrition products for a healthier you</div>
+        <div className="second-slogan">Your Daily Boost Starts Here</div>
         <div className="contact-info">
           <p className="address">8028 SE Powell Blvd. Ste. #106</p>
           <p className="address">Portland, OR 97206</p>
@@ -172,20 +82,46 @@ function App() {
 
       <main className="main-content">
 
+      <img src="/assets/photos/store-front.png" alt="Chiquis Nutrition Store" className="featured-image" />
+      <p className="featured-caption">{`Chiqui's Nutrition in the SE Portland area is a health food spot serving protein shakes, bowls, waffles, and energy teas, post-workout fuel options focusing on fitness-oriented nutrition.`}</p>
+
         <section className="products" id="products">
-          <h2 className="pacifico-title">Our Products</h2>
-          <div className="product-grid">
-            {products.map((product) => (
-              <div key={product.id} className="product-card">
-                <div className="product-image-placeholder">
-                  <img src={product.image} alt={product.name} className="product-image" />
-                </div>
-                <h3>{product.name}</h3>
-                <p className="category">{product.category}</p>
-                <p className="description">{product.description}</p>
-                <button className="order-btn">Order Now</button>
+
+          <div className="photo-section" id="food-section">
+            <h2 className="pacifico-title gallery-title">Food</h2>
+            <div className="photo-mosaic food-mosaic">
+              {foodPhotos.map((src, i) => (
+                <img key={i} src={src} alt="Food" className="mosaic-img" />
+              ))}
+            </div>
+            <p className="featured-caption">{foodText}</p>
+          </div>
+
+          <div className="photo-section" id="beverages-section">
+            <h2 className="pacifico-title gallery-title">Beverages</h2>
+            <div className="photo-mosaic beverages-mosaic">
+              {beveragePhotos.map((src, i) => (
+                <img key={i} src={src} alt="Beverage" className="mosaic-img" />
+              ))}
+            </div>
+          </div>
+
+          <div className="photo-section" id="supplements-section">
+            <h2 className="pacifico-title gallery-title">Supplements</h2>
+            <div className="photo-mosaic supplements-mosaic">
+              <div className="mosaic-item">
+                <img src="/assets/photos/supplements/supplements.jpg" alt="Supplement" className="mosaic-img" />
+                <p className="zumba-bio mosaic-caption">{supplementText}</p>
               </div>
-            ))}
+              <div className="mosaic-item">
+                <img src="/assets/photos/supplements/vitamins.jpg" alt="Vitamins" className="mosaic-img" />
+                <p className="zumba-bio mosaic-caption">{supplementText1}</p>
+              </div>
+              <div className="mosaic-item">
+                <img src="/assets/photos/supplements/herbalife-trialpack.jpg" alt="Herbalife Trial Pack" className="mosaic-img" />
+                <p className="zumba-bio mosaic-caption">{supplementText2}</p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -193,9 +129,13 @@ function App() {
           <h2 className="pacifico-title">Zumba Classes</h2>
           <div className="zumba-content">
             <div className="zumba-image-placeholder">
-              <img src="/assets/photos/ZumbaTeacher.PNG" alt="Zumba Teacher" className="zumba-image" />
+              <img src="/assets/photos/zumba.jpg" alt="Zumba Teacher" className="zumba-image" />
             </div>
             <div className="zumba-schedule">
+              <h3>About Instructor Maribel Zuñiga</h3>
+              <p className="zumba-bio">{zumbaClassText1}</p>
+              <p className="zumba-bio">{zumbaClassText2}</p>
+              <p className="zumba-bio">{zumbaClassText3}</p>
               <h3>Class Schedule</h3>
               <div className="schedule-grid">
                 <div className="schedule-item">
@@ -211,7 +151,6 @@ function App() {
                   <span className="time">1:00 PM</span>
                 </div>
               </div>
-              <button className="join-btn">Join a Class</button>
             </div>
           </div>
         </section>
