@@ -1,4 +1,49 @@
-export const englishText = {
+export interface SiteText {
+  slogan: string
+  nav: {
+    food: string
+    beverages: string
+    supplements: string
+    classes: string
+    contact: string
+  }
+  address1: string
+  address2: string
+  phone: string
+  featuredCaption: string
+  foodTitle: string
+  foodCaption: string
+  beveragesTitle: string
+  supplementsTitle: string
+  supplementCaption1: string
+  supplementCaption2: string
+  supplementCaption3: string
+  zumbaTitle: string
+  zumbaInstructorTitle: string
+  zumbaBio1: string
+  zumbaBio2: string
+  zumbaBio3: string
+  zumbaScheduleTitle: string
+  days: {
+    monday: string
+    wednesday: string
+    saturday: string
+  }
+  hoursTitle: string
+  hoursMonFri: string
+  hoursMonFriTime: string
+  hoursSat: string
+  hoursSatTime: string
+  hoursSun: string
+  hoursSunValue: string
+  locationTitle: string
+  contactTitle: string
+  copyright: string
+  madeWith: string
+  madeBy: string
+}
+
+export const englishText: SiteText = {
   // Header
   slogan: 'Your Daily Boost Starts Here',
 
@@ -66,7 +111,7 @@ export const englishText = {
   madeBy: 'by',
 }
 
-export const spanishText = {
+export const spanishText: SiteText = {
   // Header
   slogan: 'Tu Impulso Diario Comienza Aquí',
 

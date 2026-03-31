@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import './App.css'
 import packageJson from '../package.json'
-import { englishText, spanishText } from './text.js'
+import { englishText, spanishText } from './text.ts'
 
-const App = () => {
-  const [menuOpen, setMenuOpen] = useState(false)
-  const [lang, setLang] = useState('en')
+const App: React.FC = () => {
+  const [menuOpen, setMenuOpen] = useState<boolean>(false)
+  const [lang, setLang] = useState<'en' | 'es'>('en')
 
   const t = lang === 'en' ? englishText : spanishText
 
