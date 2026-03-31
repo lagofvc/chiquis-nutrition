@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import './App.css'
 import packageJson from '../package.json'
-import { englishText, spanishText } from './text.ts'
+import { EN } from './EN.ts'
+import { ES } from './ES.ts'
 
 const App: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false)
   const [lang, setLang] = useState<'en' | 'es'>('en')
 
-  const t = lang === 'en' ? englishText : spanishText
+  const t = lang === 'en' ? EN : ES
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen)
@@ -38,9 +39,9 @@ const App: React.FC = () => {
       <header className="header">
         <div className="header-top">
           <div className="header-left">
-            <img src="/assets/logo/chiquisLogo_simple.png" alt="Chiqui's Logo" className="header-logo" />
+            <img src="/assets/logo/chiquisLogo_simple.png" alt={t.alt.headerLogo} className="header-logo" />
             <div className="header-text">
-              <h1><span className="header-chiquis">Chiqui's</span> <span className="header-nutrition">Nutrition</span></h1>
+              <h1><span className="header-chiquis">{t.headerChiquis}</span> <span className="header-nutrition">{t.headerNutrition}</span></h1>
               <p className={`header-slogan${lang === 'es' ? ' header-slogan--es' : ''}`}>{t.slogan}</p>
             </div>
           </div>
@@ -54,7 +55,7 @@ const App: React.FC = () => {
           <button
             className={`burger-menu ${menuOpen ? 'open' : ''}`}
             onClick={toggleMenu}
-            aria-label="Toggle menu"
+            aria-label={t.aria.toggleMenu}
           >
             <span></span>
             <span></span>
@@ -68,27 +69,26 @@ const App: React.FC = () => {
           <button
             className={`lang-btn ${lang === 'en' ? 'active' : ''}`}
             onClick={() => setLang('en')}
-            title="English"
-            aria-label="Switch to English"
+            title={t.lang.englishTitle}
+            aria-label={t.aria.switchToEnglish}
           >
-            {/* <div className="flag-circle"><FlagUS /></div> */}
-            <img src="/assets/photos/flags/usa.png" alt="USA Flag English" style={{borderRadius: 125, height: 40, width: 40}} />
-            <span className="lang-label">EN</span>
+            <img src="/assets/photos/flags/usa.png" alt={t.alt.usaFlag} style={{borderRadius: 125, height: 40, width: 40}} />
+            <span className="lang-label">{t.lang.enLabel}</span>
           </button>
           <button
             className={`lang-btn ${lang === 'es' ? 'active' : ''}`}
             onClick={() => setLang('es')}
-            title="Español"
-            aria-label="Cambiar a Español"
+            title={t.lang.spanishTitle}
+            aria-label={t.aria.switchToSpanish}
           >
-            <img src="/assets/photos/flags/spain.png" alt="Spain Flag Spanish" style={{borderRadius: 125, height: 40, width: 40}} />
-            <span className="lang-label">ES</span>
+            <img src="/assets/photos/flags/spain.png" alt={t.alt.spainFlag} style={{borderRadius: 125, height: 40, width: 40}} />
+            <span className="lang-label">{t.lang.esLabel}</span>
           </button>
         </div>
       </div>
 
       <section className="logo-section">
-        <img src="/assets/logo/Chiquis_Full_Color_Logo.png" alt="Chiquis Full Color Logo" className="main-logo" />
+        <img src="/assets/logo/Chiquis_Full_Color_Logo.png" alt={t.alt.fullLogo} className="main-logo" />
         <div className="second-slogan">{t.slogan}</div>
         <div className="contact-info">
           <p className="address">{t.address1}</p>
@@ -99,7 +99,7 @@ const App: React.FC = () => {
 
       <main className="main-content">
 
-      <img src="/assets/photos/store-front.png" alt="Chiquis Nutrition Store" className="featured-image" />
+      <img src="/assets/photos/store-front.png" alt={t.alt.storeFront} className="featured-image" />
       <p className="featured-caption">{t.featuredCaption}</p>
 
         <section className="products" id="products">
@@ -108,7 +108,7 @@ const App: React.FC = () => {
             <h2 className="pacifico-title gallery-title">{t.foodTitle}</h2>
             <div className="photo-mosaic food-mosaic">
               {foodPhotos.map((src, i) => (
-                <img key={i} src={src} alt="Food" className="mosaic-img" />
+                <img key={i} src={src} alt={t.alt.foodPhoto} className="mosaic-img" />
               ))}
             </div>
             <p className="featured-caption">{t.foodCaption}</p>
@@ -118,7 +118,7 @@ const App: React.FC = () => {
             <h2 className="pacifico-title gallery-title">{t.beveragesTitle}</h2>
             <div className="photo-mosaic beverages-mosaic">
               {beveragePhotos.map((src, i) => (
-                <img key={i} src={src} alt="Beverage" className="mosaic-img" />
+                <img key={i} src={src} alt={t.alt.beveragePhoto} className="mosaic-img" />
               ))}
             </div>
           </div>
@@ -127,15 +127,15 @@ const App: React.FC = () => {
             <h2 className="pacifico-title gallery-title">{t.supplementsTitle}</h2>
             <div className="photo-mosaic supplements-mosaic">
               <div className="mosaic-item">
-                <img src="/assets/photos/supplements/supplements.jpg" alt="Supplement" className="mosaic-img" />
+                <img src="/assets/photos/supplements/supplements.jpg" alt={t.alt.supplement} className="mosaic-img" />
                 <p className="zumba-bio mosaic-caption">{t.supplementCaption1}</p>
               </div>
               <div className="mosaic-item">
-                <img src="/assets/photos/supplements/vitamins.jpg" alt="Vitamins" className="mosaic-img" />
+                <img src="/assets/photos/supplements/vitamins.jpg" alt={t.alt.vitamins} className="mosaic-img" />
                 <p className="zumba-bio mosaic-caption">{t.supplementCaption2}</p>
               </div>
               <div className="mosaic-item">
-                <img src="/assets/photos/supplements/herbalife-trialpack.jpg" alt="Herbalife Trial Pack" className="mosaic-img" />
+                <img src="/assets/photos/supplements/herbalife-trialpack.jpg" alt={t.alt.herbalifePack} className="mosaic-img" />
                 <p className="zumba-bio mosaic-caption">{t.supplementCaption3}</p>
               </div>
             </div>
@@ -146,7 +146,7 @@ const App: React.FC = () => {
           <h2 className="pacifico-title">{t.zumbaTitle}</h2>
           <div className="zumba-content">
             <div className="zumba-image-placeholder">
-              <img src="/assets/photos/zumba.jpg" alt="Zumba Teacher" className="zumba-image" />
+              <img src="/assets/photos/zumba.jpg" alt={t.alt.zumbaTeacher} className="zumba-image" />
             </div>
             <div className="zumba-schedule">
               <h3>{t.zumbaInstructorTitle}</h3>
@@ -157,15 +157,15 @@ const App: React.FC = () => {
               <div className="schedule-grid">
                 <div className="schedule-item">
                   <span className="day">{t.days.monday}</span>
-                  <span className="time">7:00 PM</span>
+                  <span className="time">{t.schedule.mondayTime}</span>
                 </div>
                 <div className="schedule-item">
                   <span className="day">{t.days.wednesday}</span>
-                  <span className="time">7:00 PM</span>
+                  <span className="time">{t.schedule.wednesdayTime}</span>
                 </div>
                 <div className="schedule-item">
                   <span className="day">{t.days.saturday}</span>
-                  <span className="time">1:00 PM</span>
+                  <span className="time">{t.schedule.saturdayTime}</span>
                 </div>
               </div>
             </div>
@@ -199,21 +199,21 @@ const App: React.FC = () => {
 
         <div className="footer-bottom">
           <div className="social-icons">
-              <a href="https://www.instagram.com/chiquis_nutricenter?igsh=MXFteTcxNGl5ZDN1YQ==" target="_blank" rel="noopener noreferrer" title="Instagram" className="social-link">
+              <a href="https://www.instagram.com/chiquis_nutricenter?igsh=MXFteTcxNGl5ZDN1YQ==" target="_blank" rel="noopener noreferrer" title={t.social.instagram} className="social-link">
                 <i className="fab fa-instagram"></i>
               </a>
-              <a href="https://www.facebook.com/share/16foWSHNSE/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" title="Facebook" className="social-link">
+              <a href="https://www.facebook.com/share/16foWSHNSE/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" title={t.social.facebook} className="social-link">
                 <i className="fab fa-facebook"></i>
               </a>
               {/* <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" title="TikTok" className="social-link">
                 <i className="fab fa-tiktok"></i>
               </a>*/}
-              <a href="https://maps.app.goo.gl/aUxVC8CcPUcWfeHu6" target="_blank" rel="noopener noreferrer" title="Google Maps" className="social-link">
+              <a href="https://maps.app.goo.gl/aUxVC8CcPUcWfeHu6" target="_blank" rel="noopener noreferrer" title={t.social.googleMaps} className="social-link">
                 <i className="fas fa-location-dot"></i>
               </a>
           </div>
           <div style={{lineHeight: 1.5, letterSpacing: 0.7}}>
-            <p>&copy; {new Date().getFullYear()} Chiqui's Nutrition.&nbsp;&nbsp;&nbsp;{t.copyright}</p>
+            <p>&copy; {new Date().getFullYear()} {t.brandName}.&nbsp;&nbsp;&nbsp;{t.copyright}</p>
             <p>{t.madeWith} <span style={{color: '#ff69b4'}}>❤</span> {t.madeBy} <a href="https://fabiovalentino.com" target="_blank" rel="noopener noreferrer" className="credit-link"><strong>Valentronix</strong></a></p>
             <p><span style={{fontFamily: 'monospace'}}>v{packageJson.version}</span></p>
           </div>
