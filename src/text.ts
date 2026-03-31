@@ -10,6 +10,7 @@ export interface SiteText {
   address1: string
   address2: string
   phone: string
+  email: string
   featuredCaption: string
   foodTitle: string
   foodCaption: string
@@ -60,6 +61,7 @@ export const englishText: SiteText = {
   address1: '8028 SE Powell Blvd. Ste. #106',
   address2: 'Portland, OR 97206',
   phone: '(503) 935-6027',
+  email: 'chiquisnutritionpdx@gmail.com',
 
   // Featured store image
   featuredCaption:
@@ -128,6 +130,7 @@ export const spanishText: SiteText = {
   address1: '8028 SE Powell Blvd. Ste. #106',
   address2: 'Portland, OR 97206',
   phone: '(503) 935-6027',
+  email: 'chiquisnutritionpdx@gmail.com',
 
   // Featured store image
   featuredCaption:

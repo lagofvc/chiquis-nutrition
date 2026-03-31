@@ -93,7 +93,7 @@ const App: React.FC = () => {
         <div className="contact-info">
           <p className="address">{t.address1}</p>
           <p className="address">{t.address2}</p>
-          <p className="phone"><a href="tel:(503)935-6027">{t.phone}</a></p>
+          <p className="phone"><a href={`tel:${t.phone}`}>{t.phone}</a></p>
         </div>
       </section>
 
@@ -192,8 +192,8 @@ const App: React.FC = () => {
 
           <div className="footer-section contact-section">
             <h3>{t.contactTitle}</h3>
-            <p><a href="tel:(503)935-6027" className="phone-link">{t.phone}</a></p>
-            <p><a href="mailto:chiquisnutritionpdx@gmail.com" className="email-link">chiquisnutritionpdx@gmail.com</a></p>
+            <p><a href={`tel:${t.phone}`} className="phone-link">{t.phone}</a></p>
+            <p><a href={`mailto:${t.email}`} className="email-link">{t.email}</a></p>
           </div>
         </div>
 
