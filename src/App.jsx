@@ -199,15 +199,15 @@ const App = () => {
 
         <div className="footer-bottom">
           <div className="social-icons">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram" className="social-link">
+              <a href="https://www.instagram.com/chiquis_nutricenter?igsh=MXFteTcxNGl5ZDN1YQ==" target="_blank" rel="noopener noreferrer" title="Instagram" className="social-link">
                 <i className="fab fa-instagram"></i>
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook" className="social-link">
+              <a href="https://www.facebook.com/share/16foWSHNSE/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" title="Facebook" className="social-link">
                 <i className="fab fa-facebook"></i>
               </a>
-              <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" title="TikTok" className="social-link">
+              {/* <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" title="TikTok" className="social-link">
                 <i className="fab fa-tiktok"></i>
-              </a>
+              </a>*/}
               <a href="https://maps.app.goo.gl/aUxVC8CcPUcWfeHu6" target="_blank" rel="noopener noreferrer" title="Google Maps" className="social-link">
                 <i className="fas fa-location-dot"></i>
               </a>
