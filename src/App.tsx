@@ -41,7 +41,7 @@ const App: React.FC = () => {
           <div className="header-left">
             <img src="/assets/logo/chiquisLogo_simple.png" alt={t.alt.headerLogo} className="header-logo" />
             <div className="header-text">
-              <h1><span className="header-chiquis">{t.headerChiquis}</span> <span className="header-nutrition">{t.headerNutrition}</span></h1>
+              <h1><span className="header-chiquis">{t.headerTextPt1}</span> <span className="header-nutrition">{t.headerTextPt2}</span></h1>
               <p className={`header-slogan${lang === 'es' ? ' header-slogan--es' : ''}`}>{t.slogan}</p>
             </div>
           </div>

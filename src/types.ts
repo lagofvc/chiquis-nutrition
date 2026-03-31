@@ -71,8 +71,8 @@ export interface SiteText {
 
   // Brand & credits
   brandName: string
-  headerChiquis: string
-  headerNutrition: string
+  headerTextPt1: string
+  headerTextPt2: string
 
   // Schedule times
   schedule: {

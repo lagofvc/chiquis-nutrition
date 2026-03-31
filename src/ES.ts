@@ -96,8 +96,8 @@ export const ES: SiteText = {
 
   // Brand & credits
   brandName: "Chiqui's Nutrition",
-  headerChiquis: "Chiqui's",
-  headerNutrition: 'Nutrition',
+  headerTextPt1: "Chiqui's",
+  headerTextPt2: 'Nutrition',
 
   // Schedule times
   schedule: {
